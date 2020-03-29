@@ -7,9 +7,30 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceFolder}/build/index.js",
-      "outFiles": ["${workspaceFolder}/**/*.js"]
+      "name": "prebuild then debug",
+      "program": "${workspaceFolder}/src/index.ts",
+      "preLaunchTask": "tsc:build",
+      "outFiles": ["${workspaceFolder}/build/**/*.js"],
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "debug with ts-node",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+      "sourceMaps": true,
+      "args": ["${workspaceFolder}/src/index.ts"],
+      "protocol": "inspector",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "attach to process in terminal",
+      "port": 9229,
+      "cwd": "${workspaceRoot}",
+      "restart": true,
+      "protocol": "inspector"
     }
   ]
 }
