@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "prepare": "husky install"
   },
-  "author": "",
+  "author": "Konstantin Poleshchuk",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^26.0.24",
@@ -23,6 +23,7 @@
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "ts-jest": "^27.0.4",
+    "ts-node": "^10.2.1",
     "typescript": "^4.3.5"
   }
 }
