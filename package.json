@@ -1,7 +1,7 @@
 {
-  "name": "ts-node-template",
-  "version": "0.0.2",
-  "description": "Template for node typescript project",
+  "name": "report-utils",
+  "version": "0.0.1",
+  "description": "This utils help you to create custom report",
   "scripts": {
     "start": "ts-node src/index",
     "test": "jest",
