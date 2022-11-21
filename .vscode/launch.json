@@ -10,7 +10,7 @@
       "runtimeArgs": ["run-script", "start"],
       "runtimeExecutable": "npm",
       "skipFiles": ["<node_internals>/**"],
-      "type": "pwa-node",
+      "type": "node",
       "console": "integratedTerminal"
     },
     {
@@ -19,8 +19,7 @@
       "name": "attach to process in terminal",
       "port": 9229,
       "cwd": "${workspaceRoot}",
-      "restart": true,
-      "protocol": "inspector"
+      "restart": true
     },
     {
       "name": "jest-debug-open-test",
@@ -30,8 +29,7 @@
       "args": ["${fileBasenameNoExtension}", "--runInBand"],
       "cwd": "${workspaceRoot}",
       "skipFiles": ["<node_internals>/**", "node_modules/**"],
-      "console": "integratedTerminal",
-      "protocol": "inspector"
+      "console": "integratedTerminal"
     }
   ]
 }
